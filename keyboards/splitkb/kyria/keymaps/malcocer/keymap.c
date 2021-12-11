@@ -234,9 +234,10 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
                 break;
             case ALPHA:
             default:
-                // Mouse wheel
-                //if (clockwise) tap_code(KC_WH_D);
-                //else tap_code(KC_WH_U);
+                // Tab
+                //tap_code(KC_TAB);
+                if (clockwise) tap_code(KC_TAB);
+                else tap_code16(LSFT(KC_TAB));
                 break;
         }
 
