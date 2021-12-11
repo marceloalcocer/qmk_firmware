@@ -224,20 +224,19 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
         switch (biton32(layer_state)) {
             case NUMERIC:
                 // Left/Right
-                if (clockwise) tap_code(KC_RIGHT);
-                else tap_code(KC_LEFT);
+                if (clockwise) { tap_code(KC_RIGHT); }
+                else { tap_code(KC_LEFT); }
                 break;
             case SYMBOL:
                 // Brightness
-                if (clockwise) tap_code(KC_BRIU);
-                else tap_code(KC_BRID);
+                if (clockwise) { tap_code(KC_BRIU); }
+                else { tap_code(KC_BRID); }
                 break;
             case ALPHA:
             default:
                 // Tab
-                //tap_code(KC_TAB);
-                if (clockwise) tap_code(KC_TAB);
-                else tap_code16(LSFT(KC_TAB));
+                if (clockwise) { tap_code(KC_TAB); }
+                else { tap_code16(LSFT(KC_TAB)); }
                 break;
         }
 
@@ -246,19 +245,19 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
         switch (biton32(layer_state)) {
             case NUMERIC:
                 // Up/down
-                if (clockwise) tap_code(KC_DOWN);
-                else tap_code(KC_UP);
+                if (clockwise) { tap_code(KC_DOWN); }
+                else { tap_code(KC_UP); }
                 break;
             case SYMBOL:
                 // Volume
-                if (clockwise) tap_code(KC_VOLU);
-                else tap_code(KC_VOLD);
+                if (clockwise) { tap_code(KC_VOLU); }
+                else { tap_code(KC_VOLD); }
                 break;
             case ALPHA:
             default:
                 // Page up/Page down
-                if (clockwise) tap_code(KC_PGDN);
-                else tap_code(KC_PGUP);
+                if (clockwise) { tap_code(KC_PGDN); }
+                else { tap_code(KC_PGUP); }
                 break;
         }
 
